@@ -169,7 +169,7 @@ DEFAULT_TIME_FILTER = NO_TIME_RANGE
 # [load balancer / proxy / envoy / kong / ...] timeout settings.
 # You should also make sure to configure your WSGI server
 # (gunicorn, nginx, apache, ...) timeout setting to be <= to this setting
-SUPERSET_WEBSERVER_TIMEOUT = int(timedelta(minutes=1).total_seconds())
+SUPERSET_WEBSERVER_TIMEOUT = 60 * 60 * 5
 
 # this 2 settings are used by dashboard period force refresh feature
 # When user choose auto force refresh frequency
@@ -1089,7 +1089,7 @@ SQLLAB_VALIDATION_TIMEOUT = int(timedelta(seconds=10).total_seconds())
 SQLLAB_DEFAULT_DBID = None
 
 # The MAX duration a query can run for before being killed by celery.
-SQLLAB_ASYNC_TIME_LIMIT_SEC = int(timedelta(hours=6).total_seconds())
+SQLLAB_ASYNC_TIME_LIMIT_SEC = 60 * 60 * 5
 
 # Some databases support running EXPLAIN queries that allow users to estimate
 # query costs before they run. These EXPLAIN queries should have a small

@@ -30,15 +30,15 @@ from flask_caching.backends.filesystemcache import FileSystemCache
 logger = logging.getLogger()
 
 DATABASE_DIALECT = os.getenv("DATABASE_DIALECT")
-DATABASE_USER = os.getenv("DATABASE_USER")
-DATABASE_PASSWORD = os.getenv("DATABASE_PASSWORD")
-DATABASE_HOST = os.getenv("DATABASE_HOST")
+DATABASE_USER = "postgres"
+DATABASE_PASSWORD = "postgres"
+DATABASE_HOST = "postgres"
 DATABASE_PORT = os.getenv("DATABASE_PORT")
 DATABASE_DB = os.getenv("DATABASE_DB")
 
-EXAMPLES_USER = os.getenv("EXAMPLES_USER")
-EXAMPLES_PASSWORD = os.getenv("EXAMPLES_PASSWORD")
-EXAMPLES_HOST = os.getenv("EXAMPLES_HOST")
+EXAMPLES_USER = "postgres"
+EXAMPLES_PASSWORD = "postgres"
+EXAMPLES_HOST = "postgres"
 EXAMPLES_PORT = os.getenv("EXAMPLES_PORT")
 EXAMPLES_DB = os.getenv("EXAMPLES_DB")
 
